@@ -11,10 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var gachaLabel: UIButton!
 
-    override func viewDidLoad() {        
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        gachaLabel.layer.cornerRadius = 10
+        // gachaLabel.layer.cornerRadius = 10
     }
     
     @IBAction func gacha() {

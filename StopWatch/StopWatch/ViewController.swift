@@ -9,12 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var label: UILabel!
+    
+    var count: Float = 0.0
+    var timer: Timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func start() {
+        
+    }
+    
+    @IBAction func stop() {
+        
+    }
 }
 
