@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // セルの数をsongNameArrayの数と定義
         return songNameArray.count
     }
-    // ID付きのセルを取得して,セル付属のtextLabelに「テスト」と表示
+    // ID付きのセルを取得して,セル付属のtextLabelに曲名を表示
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         // セルにsongNameArrayの曲名を表示
