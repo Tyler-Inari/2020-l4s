@@ -15,6 +15,15 @@
 		3C0AE57E25165E5A00D60BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0AE57C25165E5A00D60BCD /* LaunchScreen.storyboard */; };
 		3C0AE58925165E5B00D60BCD /* TechPodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AE58825165E5B00D60BCD /* TechPodTests.swift */; };
 		3C0AE59425165E5B00D60BCD /* TechPodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AE59325165E5B00D60BCD /* TechPodUITests.swift */; };
+		3C1AB7A52517BF400051C69B /* Nighthawks.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AB7A12517BF400051C69B /* Nighthawks.m4a */; };
+		3C1AB7A62517BF400051C69B /* ナンバーナイン.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AB7A22517BF400051C69B /* ナンバーナイン.m4a */; };
+		3C1AB7A72517BF400051C69B /* 雨の街路に夜光蟲.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AB7A32517BF400051C69B /* 雨の街路に夜光蟲.m4a */; };
+		3C1AB7A82517BF400051C69B /* 砂の惑星.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AB7A42517BF400051C69B /* 砂の惑星.m4a */; };
+		3C1AB7B22517D1980051C69B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AB7AD2517D1970051C69B /* icon.png */; };
+		3C1AB7B32517D1980051C69B /* sample_firework_square.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AB7AE2517D1970051C69B /* sample_firework_square.jpeg */; };
+		3C1AB7B42517D1980051C69B /* sample_firework.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AB7AF2517D1970051C69B /* sample_firework.jpeg */; };
+		3C1AB7B52517D1980051C69B /* bg_acane.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AB7B02517D1970051C69B /* bg_acane.jpeg */; };
+		3C1AB7B62517D1980051C69B /* bg_zutomayo_04.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AB7B12517D1970051C69B /* bg_zutomayo_04.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		3C0AE58F25165E5B00D60BCD /* TechPodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechPodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0AE59325165E5B00D60BCD /* TechPodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechPodUITests.swift; sourceTree = "<group>"; };
 		3C0AE59525165E5B00D60BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C1AB7A12517BF400051C69B /* Nighthawks.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nighthawks.m4a; sourceTree = "<group>"; };
+		3C1AB7A22517BF400051C69B /* ナンバーナイン.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ナンバーナイン.m4a"; sourceTree = "<group>"; };
+		3C1AB7A32517BF400051C69B /* 雨の街路に夜光蟲.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "雨の街路に夜光蟲.m4a"; sourceTree = "<group>"; };
+		3C1AB7A42517BF400051C69B /* 砂の惑星.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "砂の惑星.m4a"; sourceTree = "<group>"; };
+		3C1AB7AD2517D1970051C69B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		3C1AB7AE2517D1970051C69B /* sample_firework_square.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_firework_square.jpeg; sourceTree = "<group>"; };
+		3C1AB7AF2517D1970051C69B /* sample_firework.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_firework.jpeg; sourceTree = "<group>"; };
+		3C1AB7B02517D1970051C69B /* bg_acane.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_acane.jpeg; sourceTree = "<group>"; };
+		3C1AB7B12517D1970051C69B /* bg_zutomayo_04.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_zutomayo_04.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,8 @@
 		3C0AE57025165E5900D60BCD /* TechPod */ = {
 			isa = PBXGroup;
 			children = (
+				3C1AB7AC2517D1970051C69B /* img */,
+				3C1AB7A02517BF400051C69B /* music */,
 				3C0AE57125165E5900D60BCD /* AppDelegate.swift */,
 				3C0AE57325165E5900D60BCD /* SceneDelegate.swift */,
 				3C0AE57525165E5900D60BCD /* ViewController.swift */,
@@ -126,6 +146,31 @@
 				3C0AE59525165E5B00D60BCD /* Info.plist */,
 			);
 			path = TechPodUITests;
+			sourceTree = "<group>";
+		};
+		3C1AB7A02517BF400051C69B /* music */ = {
+			isa = PBXGroup;
+			children = (
+				3C1AB7A12517BF400051C69B /* Nighthawks.m4a */,
+				3C1AB7A22517BF400051C69B /* ナンバーナイン.m4a */,
+				3C1AB7A32517BF400051C69B /* 雨の街路に夜光蟲.m4a */,
+				3C1AB7A42517BF400051C69B /* 砂の惑星.m4a */,
+			);
+			name = music;
+			path = ../../iphone_material/music;
+			sourceTree = "<group>";
+		};
+		3C1AB7AC2517D1970051C69B /* img */ = {
+			isa = PBXGroup;
+			children = (
+				3C1AB7AD2517D1970051C69B /* icon.png */,
+				3C1AB7AE2517D1970051C69B /* sample_firework_square.jpeg */,
+				3C1AB7AF2517D1970051C69B /* sample_firework.jpeg */,
+				3C1AB7B02517D1970051C69B /* bg_acane.jpeg */,
+				3C1AB7B12517D1970051C69B /* bg_zutomayo_04.jpeg */,
+			);
+			name = img;
+			path = ../../iphone_material/img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +277,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0AE57E25165E5A00D60BCD /* LaunchScreen.storyboard in Resources */,
+				3C1AB7A82517BF400051C69B /* 砂の惑星.m4a in Resources */,
+				3C1AB7B32517D1980051C69B /* sample_firework_square.jpeg in Resources */,
+				3C1AB7A72517BF400051C69B /* 雨の街路に夜光蟲.m4a in Resources */,
+				3C1AB7B42517D1980051C69B /* sample_firework.jpeg in Resources */,
 				3C0AE57B25165E5A00D60BCD /* Assets.xcassets in Resources */,
+				3C1AB7B22517D1980051C69B /* icon.png in Resources */,
 				3C0AE57925165E5900D60BCD /* Main.storyboard in Resources */,
+				3C1AB7A62517BF400051C69B /* ナンバーナイン.m4a in Resources */,
+				3C1AB7B52517D1980051C69B /* bg_acane.jpeg in Resources */,
+				3C1AB7B62517D1980051C69B /* bg_zutomayo_04.jpeg in Resources */,
+				3C1AB7A52517BF400051C69B /* Nighthawks.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
