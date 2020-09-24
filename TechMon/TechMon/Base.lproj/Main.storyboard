@@ -149,22 +149,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 /20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2E-4Y-s9e">
-                                <rect key="frame" x="108" y="455" width="36" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 /20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2E-4Y-s9e">
+                                <rect key="frame" x="81" y="455" width="63" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 / 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-t4-9Xh">
-                                <rect key="frame" x="97" y="481" width="47" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 / 100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-t4-9Xh">
+                                <rect key="frame" x="81" y="481" width="63" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 / 35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGa-4D-aWE">
-                                <rect key="frame" x="292" y="122" width="40" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 / 35" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGa-4D-aWE">
+                                <rect key="frame" x="264" y="122" width="68" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -211,6 +211,9 @@
                                 <state key="normal" title="こうげき" backgroundImage="gold_button.png">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="attackAction" destination="4sy-Q7-4fl" eventType="touchUpInside" id="UeV-Ha-5TE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH1-x6-91g">
                                 <rect key="frame" x="137" y="557" width="100" height="70"/>
@@ -218,6 +221,9 @@
                                 <state key="normal" title="ファイア" backgroundImage="gold_button.png">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="fire" destination="4sy-Q7-4fl" eventType="touchUpInside" id="qNu-Hm-5a5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4D-bw-4t2">
                                 <rect key="frame" x="259" y="557" width="100" height="70"/>
@@ -225,11 +231,25 @@
                                 <state key="normal" title="ためる" backgroundImage="gold_button.png">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="tameruAction" destination="4sy-Q7-4fl" eventType="touchUpInside" id="QQH-Yg-vSK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4mk-Al-LeQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="enemyHPLabel" destination="Mca-BB-ERJ" id="nk4-ai-HFW"/>
+                        <outlet property="enemyImageView" destination="zcD-Fm-0eW" id="4f9-Nx-qU0"/>
+                        <outlet property="enemyMPLabel" destination="UGa-4D-aWE" id="Dy8-9A-XaI"/>
+                        <outlet property="enemyNameLabel" destination="dZ2-Hx-12N" id="qDm-OA-v5C"/>
+                        <outlet property="playerHPLabel" destination="9fr-xi-3mY" id="BOO-fR-hWR"/>
+                        <outlet property="playerImageView" destination="mWU-le-8vU" id="ocz-D2-7Az"/>
+                        <outlet property="playerMPLabel" destination="B2E-4Y-s9e" id="JJj-f5-fy2"/>
+                        <outlet property="playerNameLabel" destination="0Ic-G6-RKV" id="Zpf-ai-TLH"/>
+                        <outlet property="playerTPlabel" destination="Chd-t4-9Xh" id="In8-C3-otR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpe-98-lYb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
