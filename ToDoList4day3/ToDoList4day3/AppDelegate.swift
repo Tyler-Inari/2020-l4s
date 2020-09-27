@@ -1,15 +1,16 @@
 //
 //  AppDelegate.swift
-//  MemoPad
+//  ToDoList4day3
 //
-//  Created by Tyler Inari on 2020/09/19.
-//  Copyright © 2020 Inari Hotaru. All rights reserved.
+//  Created by Tyler Inari on 2020/09/27.
 //
 
 import UIKit
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
