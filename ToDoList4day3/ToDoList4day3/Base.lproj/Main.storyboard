@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="iTo-6L-fjf">
                         <barButtonItem key="rightBarButtonItem" title="+" width="7" id="hhq-n3-DIK">
                             <connections>
-                                <segue destination="OH4-lK-8Pw" kind="presentation" id="VOv-Rl-EGg"/>
+                                <segue destination="OH4-lK-8Pw" kind="show" id="VOv-Rl-EGg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,7 +55,7 @@
             <objects>
                 <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OH4-lK-8Pw" customClass="InputViewController" customModule="ToDoList4day3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jvL-xd-v1W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-DG-6ni">

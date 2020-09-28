@@ -44,7 +44,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if saveData.object(forKey: "todo") != nil {
             todoArray = saveData.object(forKey: "todo") as! [String]
         }
-//        table.reloadData()
+        
+        table.reloadData()
         print("todoArray", todoArray)
     }
     

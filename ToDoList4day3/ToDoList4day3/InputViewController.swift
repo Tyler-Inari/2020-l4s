@@ -46,6 +46,7 @@ class InputViewController: UIViewController, UITextFieldDelegate, UIAdaptivePres
     @IBAction func back(sender: AnyObject) {
 //        let parentVC = presentingViewController as! ViewController
 //        parentVC.update()
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
