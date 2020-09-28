@@ -7,32 +7,28 @@
 
 import UIKit
 
-class InputViewController: UIViewController, UITextFieldDelegate {
+class InputViewController: UIViewController, UITextFieldDelegate, UIAdaptivePresentationControllerDelegate {
     @IBOutlet var todoTextField: UITextField!
-    
     // ユーザーデフォルトにアクセス
     var saveData: UserDefaults = UserDefaults.standard
-
+    // 記入したtodoを格納するための配列
+    // var todoArray = [String]()
+    var todo: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // UserDefaultsから読み込み
-        todoTextField.text = saveData.object(forKey: "todo") as? String
-        todoTextField.delegate = self
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func saveToDo() {
         // UserDefaultsに書き込み
-        saveData.set(todoTextField.text, forKey: "todo")
-        print("saveData", saveData)
-        print(todoTextField.text)
-        // アラート
-        let alert: UIAlertController = UIAlertController(title: "todo", message: "リストを更新します。", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-        // ボタンが押された時の動作
-        self.navigationController?.popViewController(animated: true)
+        // saveData.set(todoTextField.text, forKey: "todo")
+        todo = saveData.array(forKey: "todo") as? [String] ?? []
+        if let text = todoTextField.text{
+            todo.append(text)
+        }
+        saveData.set(todo, forKey: "todo")
+        print("todo", todo)
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -40,4 +36,16 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        todoTextField = nil
+    }
+    
+//    @IBAction func back() {
+//        self.dismiss(animated: true, completion: nil)
+//    }
+    @IBAction func back(sender: AnyObject) {
+//        let parentVC = presentingViewController as! ViewController
+//        parentVC.update()
+        self.dismiss(animated: true, completion: nil)
+    }
 }

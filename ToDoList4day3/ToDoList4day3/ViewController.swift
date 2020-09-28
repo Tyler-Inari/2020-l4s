@@ -11,22 +11,40 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // TableViewを宣言
     @IBOutlet var table: UITableView!
     // クラスの呼び出し
-     var saveData: UserDefaults = UserDefaults.standard
-    // テキスト
-     var todoText: String!
-    // ユーザーデフォルトの読み込み
-    
+    var saveData: UserDefaults = UserDefaults.standard
     // 記入したtodoを格納するための配列
     var todoArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // todoを記入するための配列
+        if saveData.object(forKey: "todo") != nil {
+            todoArray = saveData.object(forKey: "todo") as! [String]
+        }
         // テーブルビューのデータソースメソッドはViewControllerクラスに書くという設定
         table.dataSource = self
         // テーブルビューのデリゲートメソッドはViewControllerクラスに書くという設定
         table.delegate = self
+    }
+    
+    func update() {
         // todoを記入するための配列
-        todoArray.append((saveData.object(forKey: "todo") as? String)!)
+        if saveData.object(forKey: "todo") != nil {
+            todoArray = saveData.object(forKey: "todo") as! [String]
+        }
+        // テーブルビューのデータソースメソッドはViewControllerクラスに書くという設定
+        table.dataSource = self
+        // テーブルビューのデリゲートメソッドはViewControllerクラスに書くという設定
+        table.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // 保存した内容の取得
+        if saveData.object(forKey: "todo") != nil {
+            todoArray = saveData.object(forKey: "todo") as! [String]
+        }
+//        table.reloadData()
         print("todoArray", todoArray)
     }
     
@@ -37,22 +55,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // ID付きのセルの取得をし,セル付属のtextLabelの表示設定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = todoArray[indexPath.row]
-        return cell!
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+//        cell?.textLabel?.text = todoArray[indexPath.row]
+//        return cell!
+        
+//        let cell: UITableViewCell = UITableViewCell()
+//        cell.textLabel!.text = todoArray[indexPath.row]
+//        return cell
+        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel!.text = todoArray[indexPath.row]
+        return cell
     }
     
     // セルが押された時に呼ばれるメソッド
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("todoArray", todoArray[indexPath.row])
-//    }
-
     func tableView(_ tableView:UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
             todoArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+            saveData.removeObject(forKey: "todo")
+            saveData.set(todoArray, forKey: "todo" )
         }
     }
-
 }
-
